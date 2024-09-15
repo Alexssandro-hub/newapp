@@ -12,26 +12,29 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
+        headerShown: true,
+        headerStyle: {
+          backgroundColor: '#4169E1', // Cor de fundo roxa
+          shadowColor: 'transparent', // Remove a sombra (opcional)
+        },
+        headerTitleStyle: {
+          fontWeight: 'bold', // Negrito no título
+          fontSize: 22, // Tamanho da fonte do título
+          color: '#fff', // Título com cor branca
+        },
+        headerTintColor: '#fff', // Cor dos ícones e botões do header
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Texto para áudio',
+          headerTitleAlign: 'center',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
+          tabBarStyle: { display: 'none' }, 
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
+      /> 
     </Tabs>
   );
 }
