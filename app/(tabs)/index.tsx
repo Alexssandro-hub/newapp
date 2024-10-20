@@ -6,7 +6,7 @@ import { manipulateAsync, SaveFormat } from 'expo-image-manipulator';
 import * as FileSystem from 'expo-file-system';
 import { Ionicons } from '@expo/vector-icons';
  
-const API_KEY = 'AIzaSyAHpRUyfbp6tM7r_cTH91SqBfQnq6iOsH8';
+const API_KEY = 'you_APIKEY';
 
 export default function HomeScreen() {
   const [image, setImage] = useState<string | null>(null);
